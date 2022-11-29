@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17f8808d-28ff-436b-88ef-9f374203872e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/HueReaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/HueReaction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/external/Balaboba.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/DialogContinueReaction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/config/BotConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/config/BotConfiguration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669676842176</updated>
       <workItem from="1669676843409" duration="4473000" />
-      <workItem from="1669685187955" duration="13954000" />
+      <workItem from="1669685187955" duration="17056000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669677179643</created>
@@ -188,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669738356832</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="new year ability">
+      <created>1669739098420</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669739098420</updated>
+    </task>
+    <task id="LOCAL-00008" summary="new year ability">
+      <created>1669739137686</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669739137686</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
