@@ -10,7 +10,7 @@ import ru.aezhko.implementation.reaction.Reaction
 
 class ArnoldoBot(
     private val properties: BotProperties,
-    private val reactions :List<Reaction>
+    private val reactions: List<Reaction>
 ): TelegramLongPollingBot() {
     private val logger = LoggerFactory.getLogger(ArnoldoBot::class.java)
 

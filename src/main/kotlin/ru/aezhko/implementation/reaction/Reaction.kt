@@ -18,6 +18,6 @@ interface Reaction {
         val BOT_NAMES: List<String> = listOf(
             "арнольд",
             "arnold"
-        );
+        )
     }
 }
