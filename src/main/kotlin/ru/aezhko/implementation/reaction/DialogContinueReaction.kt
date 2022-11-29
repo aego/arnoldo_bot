@@ -17,11 +17,12 @@ class DialogContinueReaction(
         var text = update.message.text
 
         if (map.containsKey(chatId)) {
+            text += ". "
             text += map[chatId]
         }
         map[chatId] = text
 
-        return Random.nextInt(0, 7) == 1
+        return Random.nextInt(0, 5) == 1
     }
 
     override fun getText(update: Update): String {
