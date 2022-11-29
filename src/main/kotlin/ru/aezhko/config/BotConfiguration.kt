@@ -19,7 +19,7 @@ class BotConfiguration(
     private val logger = LoggerFactory.getLogger(BotConfiguration::class.java)
 
     @Bean
-    fun init(): TelegramBotsApi? {
+    fun init():TelegramBotsApi? {
         return try {
             logger.info("Starting...")
             logger.info("Found reactions: $reactions")

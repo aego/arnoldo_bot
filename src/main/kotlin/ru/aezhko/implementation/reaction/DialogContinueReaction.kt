@@ -22,7 +22,7 @@ class DialogContinueReaction(
         }
         map[chatId] = text
 
-        return Random.nextInt(0, 5) == 1
+        return Random.nextInt(0, 6) == 1
     }
 
     override fun getText(update: Update): String {
