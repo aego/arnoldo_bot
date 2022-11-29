@@ -44,5 +44,5 @@ tasks.withType<KotlinCompile> {
 }
 
 application {
-    mainClass.set("ru.aezhko.BotApplication")
+    mainClass.set("ru.aezhko.BotApplicationKt")
 }

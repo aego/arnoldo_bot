@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17f8808d-28ff-436b-88ef-9f374203872e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/NewYearReaction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/ArnoldoBot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/ArnoldoBot.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/Reaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/Reaction.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -147,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669676842176</updated>
       <workItem from="1669676843409" duration="4473000" />
-      <workItem from="1669685187955" duration="12891000" />
+      <workItem from="1669685187955" duration="13126000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669677179643</created>
@@ -177,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669734889356</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new year ability">
+      <created>1669737981613</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669737981613</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +192,8 @@
     <MESSAGE value="spring app init" />
     <MESSAGE value="demo bot no tests implementation" />
     <MESSAGE value="command detection implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="command detection implemented" />
+    <MESSAGE value="new year ability" />
+    <option name="LAST_COMMIT_MESSAGE" value="new year ability" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
