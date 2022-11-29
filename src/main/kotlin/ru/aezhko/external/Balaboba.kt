@@ -10,7 +10,9 @@ import org.springframework.web.client.RestTemplate
 @Component
 class Balaboba {
     fun continueText(query: String?): String? {
-        val url = "https://yandex.ru/lab/api/yalm/text3"
+        // val url = "https://yandex.ru/lab/api/yalm/text3"
+        val url = "https://zeapi.yandex.net/lab/api/yalm/text3"
+
 
         val restTemplate = RestTemplate()
 
