@@ -5,9 +5,9 @@ import org.telegram.telegrambots.meta.api.objects.Update
 import ru.aezhko.data.Anekdots
 
 @Component
-class AnekdotReaction(): Reaction {
+class AnekdotReaction: Reaction {
     override fun isApplicable(update: Update): Boolean {
-        return update.message.text.contains("некдот")
+        return isCommand(update) && update.message.text.lowercase().contains("анекдот")
     }
 
     override fun getText(update: Update): String {

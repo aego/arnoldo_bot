@@ -9,7 +9,7 @@ class CockSizeReaction(
     val random: Random = Random()
 ) : Reaction {
     override fun isApplicable(update: Update): Boolean {
-        return update.message.text.contains("член") || update.message.text.contains("Член")
+        return isCommand(update) && update.message.text.lowercase().contains("член")
     }
 
     override fun getText(update: Update): String {
