@@ -12,28 +12,28 @@ import kotlin.random.Random
 class DialogContinueReaction(
     val balaboba: Balaboba
 ):Reaction {
-    val map: ConcurrentHashMap<Long, String> = ConcurrentHashMap()
+    private val map: ConcurrentHashMap<Long, String> = ConcurrentHashMap()
     private val logger = LoggerFactory.getLogger(DialogContinueReaction::class.java)
-
 
     override fun isApplicable(update: Update): Boolean {
         val chatId = update.message.chatId
-        var text = update.message.text
+        val text = update.message.text
 
         logger.info("ChatId: $chatId")
 
         if (map.containsKey(chatId)) {
-            text += ". "
-            text += map[chatId]
+            val newText = map[chatId] + ". " + text
+            map[chatId] = newText
+        } else {
+            map[chatId] = text
         }
-        map[chatId] = text
 
-        return Random.nextInt(0, 6) == 1
+        return Random.nextInt(0, 7) == 1
     }
 
     override fun getText(update: Update): String {
         val chatId = update.message.chatId
-        val storedContext = map[chatId]
+        val storedContext = map[chatId]?.take(150)
         logger.info("Context: $storedContext")
 
         val balabobaText = balaboba.continueText(storedContext)

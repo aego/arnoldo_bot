@@ -18,9 +18,9 @@ class Balaboba {
 
         val headers = HttpHeaders()
         headers.contentType = MediaType.APPLICATION_JSON
-        headers.set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15")
-        headers.set("Origin", "https://yandex.ru")
-        headers.set("Referer", "https://yandex.ru/")
+        // headers.set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15")
+        // headers.set("Origin", "https://yandex.ru")
+        // headers.set("Referer", "https://yandex.ru/")
 
         val entity: HttpEntity<Request> = HttpEntity(Request(query), headers)
         val response = restTemplate.postForObject(url, entity, Response::class.java)

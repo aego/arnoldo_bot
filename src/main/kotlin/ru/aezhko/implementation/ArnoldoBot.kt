@@ -37,6 +37,10 @@ class ArnoldoBot(
     }
 
     private fun sendMessage(text: String, update: Update) {
+        if (text.length < 5) {
+            return
+        }
+
         val message = SendMessage()
         message.chatId = update.message.chatId.toString()
         message.replyToMessageId = update.message.messageId
