@@ -17,7 +17,7 @@ class HueReaction(
 ) : Reaction {
     override fun isApplicable(update: Update): Boolean {
         return hueMapping.containsKey(update.message.from.userName)
-            && Random().nextInt(0, 14) < 2
+            && Random().nextInt(0, 10) < 2
     }
 
     override fun getText(update: Update): String {
