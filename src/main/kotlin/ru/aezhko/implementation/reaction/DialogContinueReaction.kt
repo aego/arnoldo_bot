@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.Update
 import ru.aezhko.external.Balaboba
 import java.util.concurrent.ConcurrentHashMap
+import kotlin.math.log
 import kotlin.random.Random
 
 @Component
@@ -35,7 +36,11 @@ class DialogContinueReaction(
         val storedContext = map[chatId]
         logger.info("Context: $storedContext")
 
-        val continuedText = balaboba.continueText(storedContext)
+        val balabobaText = balaboba.continueText(storedContext)
+
+        logger.info("BalabobaText: $balabobaText")
+
+        val continuedText = balabobaText
             ?.split(".", ",", "?", "!")
 
         var res = ""
