@@ -24,6 +24,8 @@ class DialogContinueReaction(
 
         logger.info(update.toString())
 
+        if (isReplyToBot(update)) logger.info("Reply received: $update")
+
         return update.message.chat.type == "private"
             || isReplyToBot(update)
             || (isCommand(update) && Random.nextInt(0, 3) == 1)
