@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="17f8808d-28ff-436b-88ef-9f374203872e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/external/Balaboba.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/external/Balaboba.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/CockSizeReaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/CockSizeReaction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/DialogContinueReaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/DialogContinueReaction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/HueReaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/HueReaction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/NewYearReaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/NewYearReaction.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +78,7 @@
       <recent name="ru.aezhko.implementation.reaction" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DialogContinueReactionTest.queue">
+  <component name="RunManager" selected="Spring Boot.BotApplication">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -171,8 +168,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DialogContinueReactionTest.queue" />
         <item itemvalue="Spring Boot.BotApplication" />
+        <item itemvalue="Gradle.DialogContinueReactionTest.queue" />
         <item itemvalue="Kotlin.BotApplicationKt" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
@@ -187,7 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669676842176</updated>
       <workItem from="1669676843409" duration="4473000" />
-      <workItem from="1669685187955" duration="28352000" />
+      <workItem from="1669685187955" duration="29958000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669677179643</created>
@@ -315,7 +312,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669810996356</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="yet another dialogue improvements">
+      <created>1669814916844</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669814916844</updated>
+    </task>
+    <task id="LOCAL-00020" summary="yet another dialogue improvements">
+      <created>1669815024838</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1669815024838</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

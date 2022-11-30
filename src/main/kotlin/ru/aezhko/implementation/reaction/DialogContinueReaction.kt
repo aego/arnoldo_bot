@@ -19,17 +19,17 @@ class DialogContinueReaction(
         val chatId = update.message.chatId
         val text = update.message.text
 
-        logger.info("ChatId: $chatId")
         fillContext(chatId, text)
 
-        logger.info(update.toString())
-
-        if (isReplyToBot(update)) logger.info("Reply received: $update")
+        if (isReplyToBot(update)) {
+            val storedContext = chatsContext[chatId]?.joinToString(". ")
+            logger.info("Reply received: $update \nwith context\n $storedContext")
+        }
 
         return update.message.chat.type == "private"
             || isReplyToBot(update)
             || (isCommand(update) && Random.nextInt(0, 3) == 1)
-            || Random.nextInt(0, 7) == 1
+            || Random.nextInt(0, 6) == 1
     }
 
     private fun isReplyToBot(update: Update) = update.message.replyToMessage?.from?.id == ARNOLD_BOT_ID
