@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17f8808d-28ff-436b-88ef-9f374203872e" name="Changes" comment="another boba url">
+    <list default="true" id="17f8808d-28ff-436b-88ef-9f374203872e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ru/aezhko/implementation/reaction/DialogContinueReactionTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/external/Balaboba.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/external/Balaboba.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/ArnoldoBot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/ArnoldoBot.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/config/BotConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/config/BotConfiguration.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/DialogContinueReaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/DialogContinueReaction.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +26,7 @@
         <option value="Kotlin Interface" />
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -51,6 +52,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -60,12 +63,18 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="ru.aezhko.config" />
       <recent name="ru.aezhko.data" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.aezhko.implementation.reaction" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BotApplication">
+  <component name="RunManager" selected="Gradle.DialogContinueReactionTest.queue">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -77,6 +86,29 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="DialogContinueReactionTest.queue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.aezhko.implementation.reaction.DialogContinueReactionTest.queue&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -132,6 +164,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DialogContinueReactionTest.queue" />
         <item itemvalue="Spring Boot.BotApplication" />
         <item itemvalue="Kotlin.BotApplicationKt" />
         <item itemvalue="Kotlin.MainKt" />
@@ -147,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669676842176</updated>
       <workItem from="1669676843409" duration="4473000" />
-      <workItem from="1669685187955" duration="20673000" />
+      <workItem from="1669685187955" duration="24849000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669677179643</created>
@@ -247,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669754966382</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="another boba url">
+      <created>1669756402252</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669756402252</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

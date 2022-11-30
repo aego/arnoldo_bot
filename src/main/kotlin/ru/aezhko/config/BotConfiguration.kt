@@ -19,14 +19,13 @@ class BotConfiguration(
     private val logger = LoggerFactory.getLogger(BotConfiguration::class.java)
 
     @Bean
-    fun init():TelegramBotsApi? {
+    fun init(): TelegramBotsApi? {
         return try {
             logger.info("Starting...")
             logger.info("Found reactions: $reactions")
             val botsApi = TelegramBotsApi(DefaultBotSession::class.java)
             botsApi.registerBot(ArnoldoBot(properties, reactions))
             botsApi
-            null
         } catch (e: TelegramApiException) {
             e.printStackTrace()
             null

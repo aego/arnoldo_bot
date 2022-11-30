@@ -4,15 +4,15 @@ import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.Update
 import ru.aezhko.external.Balaboba
+import java.util.LinkedList
 import java.util.concurrent.ConcurrentHashMap
-import kotlin.math.log
 import kotlin.random.Random
 
 @Component
 class DialogContinueReaction(
     val balaboba: Balaboba
 ):Reaction {
-    private val map: ConcurrentHashMap<Long, String> = ConcurrentHashMap()
+    private val chatsContext: ConcurrentHashMap<Long, LinkedList<String>> = ConcurrentHashMap()
     private val logger = LoggerFactory.getLogger(DialogContinueReaction::class.java)
 
     override fun isApplicable(update: Update): Boolean {
@@ -20,40 +20,49 @@ class DialogContinueReaction(
         val text = update.message.text
 
         logger.info("ChatId: $chatId")
+        fillContext(chatId, text)
 
-        if (map.containsKey(chatId)) {
-            val newText = map[chatId] + ". " + text
-            map[chatId] = newText
-        } else {
-            map[chatId] = text
-        }
+        logger.info(update.toString())
 
         return Random.nextInt(0, 7) == 1
     }
 
     override fun getText(update: Update): String {
         val chatId = update.message.chatId
-        val storedContext = map[chatId]?.take(150)
+        val storedContext = chatsContext[chatId]?.joinToString(". ")
         logger.info("Context: $storedContext")
 
         val balabobaText = balaboba.continueText(storedContext)
-
         logger.info("BalabobaText: $balabobaText")
 
         val continuedText = balabobaText
-            ?.split(".", ",", "?", "!")
+            ?.split(".", "?", "!")
 
-        var res = ""
+        val res = ArrayList<String>()
         var cnt = 0
         if (continuedText != null) {
-            while (res.length < 100 && cnt < continuedText.size) {
-                res += continuedText[cnt]
-                res += ". "
+            while (res.size < 10 && cnt < continuedText.size) {
+                res.add(continuedText[cnt])
                 cnt++
             }
         }
 
-        map.remove(chatId)
-        return res
+        return res.joinToString(". ")
+    }
+
+    private fun fillContext(chatId: Long, text: String) {
+        if (!chatsContext.containsKey(chatId)) {
+            chatsContext[chatId] = LinkedList()
+        }
+
+        chatsContext[chatId]?.add(text)
+
+        if (chatsContext[chatId]?.size!! > CONTEXT_FACTOR) {
+            chatsContext[chatId]?.removeFirst()
+        }
+    }
+
+    companion object {
+        const val CONTEXT_FACTOR = 5;
     }
 }
