@@ -24,7 +24,13 @@ class DialogContinueReaction(
 
         logger.info(update.toString())
 
-        return Random.nextInt(0, 7) == 1
+        return isReplyToBot(update) || Random.nextInt(0, 7) == 1
+    }
+
+    private fun isReplyToBot(update: Update): Boolean {
+        val isReply = update.message.replyToMessage.from.id == ARNOLD_BOT_ID
+        logger.info("isReply $isReply")
+        return isReply
     }
 
     override fun getText(update: Update): String {
@@ -63,6 +69,7 @@ class DialogContinueReaction(
     }
 
     companion object {
-        const val CONTEXT_FACTOR = 5;
+        private const val CONTEXT_FACTOR = 6
+        private const val ARNOLD_BOT_ID = 5930116678
     }
 }
