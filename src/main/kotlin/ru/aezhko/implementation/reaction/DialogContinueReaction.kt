@@ -11,7 +11,7 @@ import kotlin.random.Random
 @Component
 class DialogContinueReaction(
     val balaboba: Balaboba
-):Reaction {
+): Reaction {
     private val chatsContext: ConcurrentHashMap<Long, LinkedList<String>> = ConcurrentHashMap()
     private val logger = LoggerFactory.getLogger(DialogContinueReaction::class.java)
 
@@ -24,23 +24,18 @@ class DialogContinueReaction(
 
         logger.info(update.toString())
 
-        return update.message.chat.type == "private" || isReplyToBot(update) || Random.nextInt(0, 7) == 1
+        return update.message.chat.type == "private"
+            || isReplyToBot(update)
+            || (isCommand(update) && Random.nextInt(0, 3) == 1)
+            || Random.nextInt(0, 7) == 1
     }
 
-    private fun isReplyToBot(update: Update): Boolean {
-        val isReply = update.message.replyToMessage?.from?.id == ARNOLD_BOT_ID
-        logger.info("isReply $isReply")
-        return isReply
-    }
+    private fun isReplyToBot(update: Update) = update.message.replyToMessage?.from?.id == ARNOLD_BOT_ID
 
     override fun getText(update: Update): String {
         val chatId = update.message.chatId
         val storedContext = chatsContext[chatId]?.joinToString(". ")
-        logger.info("Context: $storedContext")
-
         val balabobaText = balaboba.continueText(storedContext)
-        logger.info("BalabobaText: $balabobaText")
-
         val continuedText = balabobaText
             ?.split(".", "?", "!")
 
@@ -57,6 +52,10 @@ class DialogContinueReaction(
     }
 
     private fun fillContext(chatId: Long, text: String) {
+        if (text.isEmpty()) {
+            return;
+        }
+
         if (!chatsContext.containsKey(chatId)) {
             chatsContext[chatId] = LinkedList()
         }

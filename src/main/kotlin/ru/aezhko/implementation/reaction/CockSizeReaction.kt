@@ -7,7 +7,7 @@ import java.util.Random
 @Component
 class CockSizeReaction(
     val random: Random = Random()
-) : Reaction {
+): Reaction {
     override fun isApplicable(update: Update): Boolean {
         return isCommand(update) && update.message.text.lowercase().contains("член")
     }

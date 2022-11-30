@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.Update
 
 @Component
-class NewYearReaction : Reaction {
+class NewYearReaction: Reaction {
     override fun isApplicable(update: Update): Boolean {
         return isCommand(update) && update.message.text.lowercase().contains("новый год")
     }
