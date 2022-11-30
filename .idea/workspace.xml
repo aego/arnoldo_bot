@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17f8808d-28ff-436b-88ef-9f374203872e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/DialogContinueReaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/DialogContinueReaction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/HueReaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ru/aezhko/implementation/reaction/HueReaction.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669676842176</updated>
       <workItem from="1669676843409" duration="4473000" />
-      <workItem from="1669685187955" duration="25634000" />
+      <workItem from="1669685187955" duration="25988000" />
     </task>
     <task id="LOCAL-00001" summary="project init">
       <created>1669677179643</created>
@@ -298,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669809647126</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="yet another dialogue improvements">
+      <created>1669810455835</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669810455835</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

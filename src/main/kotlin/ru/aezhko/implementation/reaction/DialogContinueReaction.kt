@@ -24,11 +24,11 @@ class DialogContinueReaction(
 
         logger.info(update.toString())
 
-        return isReplyToBot(update) || Random.nextInt(0, 7) == 1
+        return update.message.chat.type == "private" || isReplyToBot(update) || Random.nextInt(0, 7) == 1
     }
 
     private fun isReplyToBot(update: Update): Boolean {
-        val isReply = update.message.replyToMessage.from.id == ARNOLD_BOT_ID
+        val isReply = update.message.replyToMessage?.from?.id == ARNOLD_BOT_ID
         logger.info("isReply $isReply")
         return isReply
     }
