@@ -30,7 +30,7 @@ class DialogContinueReaction(
         return update.message.chat.type == PRIVATE_CHAT_TYPE
             || isReplyToBot(update)
             || isArnoldMentioned(update)
-            || Random.nextInt(0, 7) == 1
+            || Random.nextInt(0, 9) == 1
     }
 
     private fun isReplyToBot(update: Update) = update.message.replyToMessage?.from?.id == ARNOLD_BOT_ID
@@ -44,7 +44,7 @@ class DialogContinueReaction(
         val res = ArrayList<String>()
         var cnt = 0
         if (continuedText != null) {
-            while (res.size < 10 && cnt < continuedText.size) {
+            while (res.size < 5 && cnt < continuedText.size) {
                 res.add(continuedText[cnt])
                 cnt++
             }
@@ -70,7 +70,7 @@ class DialogContinueReaction(
     }
 
     companion object {
-        private const val CONTEXT_FACTOR = 6
+        private const val CONTEXT_FACTOR = 5
         private const val ARNOLD_BOT_ID = 5930116678
         private const val PRIVATE_CHAT_TYPE = "private"
     }
