@@ -1,4 +1,4 @@
-package ru.aezhko.implementation
+package ru.aezhko
 
 import org.slf4j.LoggerFactory
 import org.springframework.scheduling.annotation.Scheduled
@@ -9,8 +9,8 @@ import org.telegram.telegrambots.meta.api.objects.Update
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException
 import ru.aezhko.config.BotProperties
 import ru.aezhko.external.BashOrg
-import ru.aezhko.implementation.command.CommandProcessor
-import ru.aezhko.implementation.reaction.Reaction
+import ru.aezhko.command.CommandProcessor
+import ru.aezhko.reaction.Reaction
 
 @Component
 class ArnoldoBot(

@@ -1,7 +1,8 @@
-package ru.aezhko.implementation.reaction
+package ru.aezhko.reaction.impl
 
 import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.Update
+import ru.aezhko.reaction.Reaction
 import java.util.Random
 
 @Component

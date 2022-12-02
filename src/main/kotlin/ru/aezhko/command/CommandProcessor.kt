@@ -1,9 +1,9 @@
-package ru.aezhko.implementation.command
+package ru.aezhko.command
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.Update
-import ru.aezhko.implementation.ArnoldoBot
+import ru.aezhko.ArnoldoBot
 
 @Component
 class CommandProcessor(commands: List<Command>) {

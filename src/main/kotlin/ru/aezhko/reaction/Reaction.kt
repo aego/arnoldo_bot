@@ -1,4 +1,4 @@
-package ru.aezhko.implementation.reaction
+package ru.aezhko.reaction
 
 import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.Update

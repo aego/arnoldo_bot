@@ -1,9 +1,9 @@
-package ru.aezhko.implementation.command.impl
+package ru.aezhko.command.impl
 
 import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.Update
-import ru.aezhko.implementation.ArnoldoBot
-import ru.aezhko.implementation.command.Command
+import ru.aezhko.ArnoldoBot
+import ru.aezhko.command.Command
 import java.util.Random
 
 @Component

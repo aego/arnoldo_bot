@@ -1,9 +1,10 @@
-package ru.aezhko.implementation.reaction
+package ru.aezhko.reaction.impl
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import org.telegram.telegrambots.meta.api.objects.Update
 import ru.aezhko.external.Balaboba
+import ru.aezhko.reaction.Reaction
 import java.util.LinkedList
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.random.Random
