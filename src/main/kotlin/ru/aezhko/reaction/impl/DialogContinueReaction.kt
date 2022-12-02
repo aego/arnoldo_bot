@@ -30,7 +30,7 @@ class DialogContinueReaction(
         return update.message.chat.type == PRIVATE_CHAT_TYPE
             || isReplyToBot(update)
             || isArnoldMentioned(update)
-            || Random.nextInt(0, 6) == 1
+            || Random.nextInt(0, 7) == 1
     }
 
     private fun isReplyToBot(update: Update) = update.message.replyToMessage?.from?.id == ARNOLD_BOT_ID
