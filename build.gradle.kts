@@ -26,6 +26,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.telegram:telegrambots:6.3.0")
     implementation("org.hibernate:hibernate-validator:8.0.0.Final")
+    implementation("org.jsoup:jsoup:1.7.2")
     runtimeOnly("com.h2database:h2")
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation(kotlin("test"))

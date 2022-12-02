@@ -8,7 +8,7 @@ interface Reaction {
     fun isApplicable(update: Update): Boolean
     fun getText(update: Update): String
 
-    fun isCommand(update: Update) : Boolean {
+    fun isArnoldMentioned(update: Update) : Boolean {
         return BOT_NAMES.any {
             update.message.text.contains(it, ignoreCase = true)
         }
@@ -17,7 +17,9 @@ interface Reaction {
     companion object {
         val BOT_NAMES: List<String> = listOf(
             "арнольд",
-            "arnold"
+            "arnold",
+            "ардольдик",
+            "арни"
         )
     }
 }

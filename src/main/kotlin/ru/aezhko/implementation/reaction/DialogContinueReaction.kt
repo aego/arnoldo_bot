@@ -12,8 +12,8 @@ import kotlin.random.Random
 class DialogContinueReaction(
     val balaboba: Balaboba
 ): Reaction {
-    private val chatsContext: ConcurrentHashMap<Long, LinkedList<String>> = ConcurrentHashMap()
     private val logger = LoggerFactory.getLogger(DialogContinueReaction::class.java)
+    private val chatsContext: ConcurrentHashMap<Long, LinkedList<String>> = ConcurrentHashMap()
 
     override fun isApplicable(update: Update): Boolean {
         val chatId = update.message.chatId
@@ -26,9 +26,9 @@ class DialogContinueReaction(
             logger.info("Reply received: $update \nwith context\n $storedContext")
         }
 
-        return update.message.chat.type == "private"
+        return update.message.chat.type == PRIVATE_CHAT_TYPE
             || isReplyToBot(update)
-            || (isCommand(update) && Random.nextInt(0, 3) == 1)
+            || isArnoldMentioned(update)
             || Random.nextInt(0, 6) == 1
     }
 
@@ -38,8 +38,7 @@ class DialogContinueReaction(
         val chatId = update.message.chatId
         val storedContext = chatsContext[chatId]?.joinToString(". ")
         val balabobaText = balaboba.continueText(storedContext)
-        val continuedText = balabobaText
-            ?.split(".", "?", "!")
+        val continuedText = balabobaText?.split(".", "?", "!")
 
         val res = ArrayList<String>()
         var cnt = 0
@@ -72,5 +71,6 @@ class DialogContinueReaction(
     companion object {
         private const val CONTEXT_FACTOR = 6
         private const val ARNOLD_BOT_ID = 5930116678
+        private const val PRIVATE_CHAT_TYPE = "private"
     }
 }

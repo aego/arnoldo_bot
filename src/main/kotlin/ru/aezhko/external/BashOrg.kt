@@ -1,18 +1,17 @@
-package ru.aezhko.implementation.reaction
+package ru.aezhko.external
 
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.Test
+import org.springframework.stereotype.Component
 
-internal class DialogContinueReactionTest {
-    @Test
-    fun queue() {
+@Component
+class BashOrg {
+    fun getRandomQuote(): String {
         val doc: Document = Jsoup.connect("http://www.bashorg.org/casual").get()
         val qDiv = doc.getElementsByClass("q").get(0).getElementsByTag("div")
             .get(2).getElementsByTag("div").get(0)
         val res = qDiv.text().replace("<br />", "\n")
 
-        println(res)
+        return res
     }
 }
