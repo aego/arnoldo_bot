@@ -17,7 +17,7 @@ class CommandProcessor(commands: List<Command>) {
     }
 
     fun process(update: Update, arnoldoBot: ArnoldoBot) {
-        val command = update.message.text
+        val command = update.message.text.replace("@arnoldo_hulordobot", "")
         logger.info("Command $command received")
         commandsMap[command]?.execute(update, arnoldoBot)
     }
