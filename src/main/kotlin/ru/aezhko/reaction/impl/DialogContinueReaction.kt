@@ -44,7 +44,7 @@ class DialogContinueReaction(
         val res = ArrayList<String>()
         var cnt = 0
         if (continuedText != null) {
-            while (res.size < 5 && cnt < continuedText.size) {
+            while (res.size < RESULT_SIZE && cnt < continuedText.size) {
                 res.add(continuedText[cnt])
                 cnt++
             }
@@ -70,7 +70,8 @@ class DialogContinueReaction(
     }
 
     companion object {
-        private const val CONTEXT_FACTOR = 5
+        private const val RESULT_SIZE = 3
+        private const val CONTEXT_FACTOR = 4
         private const val ARNOLD_BOT_ID = 5930116678
         private const val PRIVATE_CHAT_TYPE = "private"
     }

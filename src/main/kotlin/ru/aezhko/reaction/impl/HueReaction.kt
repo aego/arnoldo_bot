@@ -51,7 +51,7 @@ class HueReaction(
     )
 ): Reaction {
     override fun isApplicable(update: Update): Boolean {
-        return hueMapping.containsKey(update.message.from.userName)
+        return false && hueMapping.containsKey(update.message.from.userName)
             && Random().nextInt(0, 15) == 1
     }
 
