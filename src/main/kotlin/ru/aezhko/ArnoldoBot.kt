@@ -65,7 +65,7 @@ class ArnoldoBot(
         }
     }
 
-    @Scheduled(cron = "0 0 11 * * ?")
+//     @Scheduled(cron = "0 0 11 * * ?")
     private fun sendRandomQuote() {
         val quote = bashOrg.getRandomQuote()
 
